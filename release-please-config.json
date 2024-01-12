@@ -1,0 +1,11 @@
+{
+    "bump-minor-pre-major": true,
+    "changelog-path": "CHANGELOG.md",
+    "packages": {
+        "placeholder": {}
+    },
+    "plugins": [
+        "cargo-workspace"
+    ],
+    "release-type": "rust"
+}
