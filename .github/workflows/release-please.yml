@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Release Please
-        uses: GoogleCloudPlatform/release-please-action@v4.0.2
+        uses: GoogleCloudPlatform/release-please-action@v4.1.0
         with:
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
