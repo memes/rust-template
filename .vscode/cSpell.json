@@ -28,5 +28,10 @@
     ],
     "flagWords": [
         "hte"
+    ],
+    "ignorePaths": [
+        ".devcontainer/devcontainer.json",
+        ".gitignore",
+        ".pre-commit-config.yaml"
     ]
 }

@@ -2,9 +2,7 @@
 .envrc
 .direnv
 .tool-versions
+.env
 
 # Ignore generated binaries
 target/
-
-# Ignore cargo locks
-Cargo.lock
