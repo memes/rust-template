@@ -1,0 +1,36 @@
+{
+    "name": "memes-rust-template",
+    "image": "mcr.microsoft.com/devcontainers/rust:2-1-bookworm",
+    "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+        "ghcr.io/memes/devcontainers-features/direnv:1": {},
+        "ghcr.io/memes/devcontainers-features/hadolint:1": {},
+        "ghcr.io/memes/devcontainers-features/starship:1": {},
+        "ghcr.io/memes/devcontainers-features/talisman:1": {}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "DavidAnson.vscode-markdownlint",
+                "esbenp.prettier-vscode",
+                "Gruntfuggly.todo-tree",
+                "redhat.vscode-yaml",
+                "streetsidesoftware.code-spell-checker",
+                "usernamehw.errorlens",
+                "ms-azuretools.vscode-containers",
+                "vadimcn.vscode-lldb",
+                "BarbossHack.crates-io",
+                "tamasfe.even-better-toml",
+                "rust-lang.rust-analyzer"
+            ]
+        }
+    },
+    "onCreateCommand": {
+        "install-deps": "sudo sh -c 'apt update && apt install -y --no-install-recommends pipx && rm -rf /var/lib/apt/lists/*'"
+    },
+    "postCreateCommand": {
+        "pre-commit": "pipx install pre-commit && pre-commit install --hook-type commit-msg --hook-type pre-commit"
+    },
+    "containerUser": "vscode",
+    "updateRemoteUserUID": true
+}

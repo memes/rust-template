@@ -21,10 +21,16 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - name: install talisman
-        run: |
-          sudo curl -sLo /usr/local/bin/talisman https://github.com/thoughtworks/talisman/releases/download/v1.32.0/talisman_linux_amd64
-          sudo chmod 0755 /usr/local/bin/talisman
+        uses: jaxxstorm/action-install-gh-release@v1
+        with:
+          repo: thoughtworks/talisman
+          extension-matching: disable
+          rename-to: talisman
+          chmod: 0755
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
+      - uses: actions-rust-lang/setup-rust-toolchain
+        with:
+          components: clippy,rustfmt
       - uses: pre-commit/action@v3.0.1
