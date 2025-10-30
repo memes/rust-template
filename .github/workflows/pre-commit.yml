@@ -30,7 +30,7 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
-      - uses: actions-rust-lang/setup-rust-toolchain
+      - uses: actions-rust-lang/setup-rust-toolchain@v1
         with:
           components: clippy,rustfmt
       - uses: pre-commit/action@v3.0.1
